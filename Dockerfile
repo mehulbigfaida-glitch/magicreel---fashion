@@ -1,4 +1,4 @@
-FROM runpod/base:0.4.0-cuda12.1
+FROM runpod/serverless:python3.10-cuda12.1
 
 WORKDIR /app
 
