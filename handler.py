@@ -1,6 +1,6 @@
 def handler(event):
     return {
         "status": "ok",
-        "message": "MagicReel serverless initialized",
-        "input": event
+        "message": "MagicReel Dockerfile serverless is alive",
+        "input": event.get("input", {})
     }
