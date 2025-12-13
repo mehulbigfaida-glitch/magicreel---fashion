@@ -3,6 +3,7 @@
   "description": "Serverless image fusion engine for MagicReel",
   "type": "serverless",
   "category": "image",
+  "handler": "handler.handler",
   "config": {
     "runsOn": "GPU",
     "containerDiskInGb": 20,
