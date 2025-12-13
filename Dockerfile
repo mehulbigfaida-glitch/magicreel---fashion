@@ -6,4 +6,4 @@ RUN pip install --no-cache-dir runpod
 
 COPY handler.py .
 
-CMD ["python", "-u", "-m", "runpod.serverless", "handler"]
+CMD ["python", "handler.py"]
