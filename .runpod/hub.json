@@ -1,0 +1,18 @@
+{
+  "title": "MagicReel FusionWeave",
+  "description": "Serverless image fusion engine for MagicReel",
+  "type": "serverless",
+  "category": "image",
+  "config": {
+    "runsOn": "GPU",
+    "containerDiskInGb": 20,
+    "gpuCount": 1,
+    "allowedCudaVersions": [
+      "12.4",
+      "12.3",
+      "12.2",
+      "12.1",
+      "12.0"
+    ]
+  }
+}
