@@ -1,15 +1,15 @@
-import runpod
+from fastapi import FastAPI
+import uvicorn
 
-def handler(event):
-    """
-    Minimal handshake-safe handler.
-    This MUST return JSON-serializable output.
-    """
-    return {
-        "status": "ok",
-        "input": event.get("input", {})
-    }
+app = FastAPI()
 
-runpod.serverless.start({
-    "handler": handler
-})
+@app.get("/")
+def root():
+    return {"status": "magicreel server alive"}
+
+@app.get("/health")
+def health():
+    return {"ok": True}
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
