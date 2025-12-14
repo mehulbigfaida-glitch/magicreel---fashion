@@ -1,9 +1,15 @@
 import runpod
 
 def handler(event):
+    """
+    Minimal handshake-safe handler.
+    This MUST return JSON-serializable output.
+    """
     return {
         "status": "ok",
-        "message": "MagicReel serverless base is live"
+        "input": event.get("input", {})
     }
 
-runpod.serverless.start({"handler": handler})
+runpod.serverless.start({
+    "handler": handler
+})
