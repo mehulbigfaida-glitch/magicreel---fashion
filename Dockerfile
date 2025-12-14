@@ -9,3 +9,4 @@ COPY handler.py .
 EXPOSE 8000
 
 CMD ["python", "handler.py"]
+
