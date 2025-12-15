@@ -1,6 +1,15 @@
-import runpod
+from fastapi import FastAPI
+import uvicorn
 
-def handler(event):
-    return {"status": "magicreel serverless alive"}
+app = FastAPI()
 
-runpod.serverless.start({"handler": handler})
+@app.get("/")
+def root():
+    return {"status": "magicreel server alive"}
+
+@app.get("/health")
+def health():
+    return {"ok": True}
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
